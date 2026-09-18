@@ -8,13 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Compile LaTeX document
-      uses: xu-cheng/latex-action@v4
-      with:
-        # TeXLive version to use
-        texlive_version: 2026
-        # Root LaTeX file(s) to compile
-        root_file: card.tex
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: card.tex
         # Working directory for the compilation process
-        working_directory: /Users/leonorejamet/Documents/MasterDataScience/RefresherCS/my-business-card
+          working_directory: /Users/leonorejamet/Documents/MasterDataScience/RefresherCS/my-business-card
         # Use XeLaTeX engine with latexmk
-        latexmk_use_xelatex: true
+          latexmk_use_xelatex: true
