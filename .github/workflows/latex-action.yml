@@ -1,0 +1,37 @@
+- name: GitHub Action for LaTeX
+  # You may pin to the exact commit or the version.
+  # uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
+  uses: xu-cheng/latex-action@v4
+  with:
+    # TeXLive version to use
+    texlive_version: # optional
+    # Base operating system for the TeXLive Docker image ('alpine' or 'debian')
+    os: # optional, default is alpine
+    # Custom Docker image to use
+    docker_image: # optional
+    # Root LaTeX file(s) to compile
+    root_file: card.tex
+    # Working directory for the compilation process
+    working_directory: # optional
+    # Change to each root file's directory before compilation
+    work_in_root_file_dir: # optional, default is false
+    # Continue building remaining documents even if some fail
+    continue_on_error: # optional, default is false
+    # LaTeX compiler to use
+    compiler: # optional, default is latexmk
+    # Additional arguments passed to the LaTeX compiler
+    args: # optional, default is -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+    # Additional system packages to install
+    extra_system_packages: # optional
+    # Extra font files to install
+    extra_fonts: # optional
+    # Bash commands to execute before compilation
+    pre_compile: # optional
+    # Bash commands to execute after compilation
+    post_compile: # optional
+    # Enable shell-escape for latexmk
+    latexmk_shell_escape: # optional, default is false
+    # Use LuaLaTeX engine with latexmk
+    latexmk_use_lualatex: # optional, default is false
+    # Use XeLaTeX engine with latexmk
+    latexmk_use_xelatex: # optional, default is false
