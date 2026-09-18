@@ -7,11 +7,9 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v6
       - name : Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
           root_file: card.tex
-        # Working directory for the compilation process
-          working_directory: /Users/leonorejamet/Documents/MasterDataScience/RefresherCS/my-business-card
-        # Use XeLaTeX engine with latexmk
-          latexmk_use_xelatex: true
