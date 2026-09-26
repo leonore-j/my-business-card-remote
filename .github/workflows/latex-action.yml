@@ -3,10 +3,7 @@ name: Compile and release my business card
 on:
   push:
     tags:
-      - 'v*'
-
-permissions:
-  contents: write
+      - '*'
 
 jobs:
   build_latex:
