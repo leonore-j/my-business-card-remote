@@ -5,26 +5,33 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{xltxtra}
-\setromanfont[Mapping=tex-text]{Latin Modern Sans}
+\usepackage{hyperref}
+\setromanfont[Mapping=tex-text]{Liberation Sans}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
 
 \pagestyle{empty}
 \setlength\parindent{0pt}
 \usepackage[paperwidth=3.5in, 
     paperheight=2in,
-    left=0.2in,
-    right=0.2in,
-    top=0.1in,
+    left=0.15in,
+    right=0.15in,
+    top=0.05in,
     bottom=0.05in]{geometry}
 
 \begin{document}
-\centering \includegraphics[width=.25\linewidth]{logo}\\[5pt]
-\parbox{2in}{\Large \centering Léonore Jamet\\[1pt]
-\normalsize Master Student}
+\centering \includegraphics[width=.18\linewidth]{logo}\\[2pt]
+\parbox{2in}{\large \centering Léonore Jamet\\[0pt]
+\footnotesize Master Student}
 
-\vfill
+\vspace{4pt}
 \raggedright
 \begin{multicols}{2}
-leonore.jamet@icloud.com
+\footnotesize leonore.jamet@icloud.com\\
+For further information, see \href{https://leonore-j.github.io}{my personal web site}
 
 \columnbreak
 \raggedleft
